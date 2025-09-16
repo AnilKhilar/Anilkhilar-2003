@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Site — Short Tagline</title>
+  <meta name="description" content="A one-line description of your site." />
+  <style>
+    :root{--maxw:1100px;--accent:#0b6ef6}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.5;margin:0;color:#0f1720}
+    header{background:#fff;position:sticky;top:0;border-bottom:1px solid #e6e9ef}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:24px}
+    nav{display:flex;gap:12px;align-items:center;justify-content:space-between}
+    .brand{font-weight:700}
+    .cta{padding:8px 14px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none}
+    main{padding:48px 16px}
+    .hero{display:grid;gap:18px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:24px}
+    .card{padding:18px;border-radius:12px;border:1px solid #eef2f7;background:#fff}
+    footer{padding:24px;text-align:center;color:#667085}
+    @media (min-width:800px){.hero{grid-template-columns:1fr 420px;align-items:center}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand">YourBrand</div>
+        <div>
+          <a class="cta" href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <h1 style="margin:0;font-size:clamp(28px,5vw,40px)">Make something people love — your online home</h1>
+        <p style="margin-top:12px;color:#374151">Short explanation of what you do. Clear, benefit-focused sentence. Add a call to action below.</p>
+        <p style="margin-top:18px">
+          <a class="cta" href="#contact">Get started</a>
+        </p>
+      </div>
+      <div style="border-radius:12px;border:1px solid #eef2f7;padding:18px;background:#fff">
+        <strong>Highlights</strong>
+        <ul style="padding-left:18px;margin-top:8px">
+          <li>Fast & responsive</li>
+          <li>Accessible structure</li>
+          <li>Easy to customize</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="features">
+      <article class="card">
+        <h3 style="margin:0 0 8px 0">Feature one</h3>
+        <p style="margin:0;color:#475569">Short benefit statement or detail about this feature.</p>
+      </article>
+      <article class="card">
+        <h3 style="margin:0 0 8px 0">Feature two</h3>
+        <p style="margin:0;color:#475569">Short benefit statement or detail about this feature.</p>
+      </article>
+      <article class="card">
+        <h3 style="margin:0 0 8px 0">Feature three</h3>
+        <p style="margin:0;color:#475569">Short benefit statement or detail about this feature.</p>
+      </article>
+    </section>
+
+    <section id="contact" style="margin-top:36px">
+      <h2 style="margin-bottom:8px">Contact</h2>
+      <p style="margin-top:0;color:#475569">Simple contact info — or link a form from your host/platform.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="yr"></span> YourBrand — Built with ❤️</div>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
